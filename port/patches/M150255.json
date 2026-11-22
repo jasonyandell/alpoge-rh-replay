@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.QuotLocalOfQuotientLength",
+  "source_sha256": "25dc39feb717c8a618ed10c8ebd8b7c06150250e937c7903958664c5e16de9e8",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0274-lean436-20261122/P0274-receipt.json"
+}
