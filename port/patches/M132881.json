@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.GlobalProofs.RealMpData",
+  "source_sha256": "9ff73af2792395667aa83eb05a539ac677556f1740c1677f70d1f97cde49a7eb",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0267-lean436-20261122/P0267-receipt.json"
+}
