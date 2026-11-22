@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.HermitianWitt",
+  "source_sha256": "5312f5c3cbbb6311ab471a3808f09c8e76be67c0af3527f4a975b7f2d38cfd97",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

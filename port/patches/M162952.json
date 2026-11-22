@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.TraceStrongLimit",
+  "source_sha256": "5758fd7ed7c4cd28fbcba387d36ddfa82984a8928266f29d8b8212633c776c62",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

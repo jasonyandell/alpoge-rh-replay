@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.KummerTheory.Degree",
+  "source_sha256": "0950ecc32f21aa36bc58d281c4af0a46924c23c9e23e1ba47571c6049b51776a",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

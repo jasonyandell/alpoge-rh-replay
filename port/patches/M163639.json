@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PDominantPrimitiveFibres",
+  "source_sha256": "d708f82a83a911c5475739cb64884bdd0a669dbb4a93f1617005b9a4643a14d0",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. Ideal.exists_ideal_over_maximal_of_isIntegral now states `Q.under R = P`. `▸` no longer sees through the `under` abbrev, so the cast is annotated `(hPc ▸ hmax : (P.under R').IsMaximal)`, which is definitionally the original `(P.comap (algebraMap R' B')).IsMaximal`.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

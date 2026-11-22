@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.CyclotomicCharacters.ClosedSubgroups",
+  "source_sha256": "6f4be08749675c02017ab0d944a0c3719d93b05d2f59d667899dfd7de4f28155",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

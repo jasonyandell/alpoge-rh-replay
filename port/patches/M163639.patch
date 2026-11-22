@@ -1,0 +1,11 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/ArithmeticBezout/PDominantPrimitiveFibres.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/ArithmeticBezout/PDominantPrimitiveFibres.lean
+@@ -19,7 +19,7 @@
+   have hmax : (RingHom.ker φ).IsMaximal := RingHom.ker_isMaximal_of_surjective φ hφ
+   obtain ⟨P, hP, hPc⟩ := Ideal.exists_ideal_over_maximal_of_isIntegral (S := B') _ hker
+   have := hP
+-  have hmax' : (P.comap (algebraMap R' B')).IsMaximal := hPc ▸ hmax
++  have hmax' : (P.comap (algebraMap R' B')).IsMaximal := (hPc ▸ hmax : (P.under R').IsMaximal)
+   letI : Field (R' ⧸ P.comap (algebraMap R' B')) := Ideal.Quotient.field _
+   letI : Field (B' ⧸ P) := Ideal.Quotient.field P
+   let e : (R' ⧸ P.comap (algebraMap R' B')) ≃+* ℂ :=

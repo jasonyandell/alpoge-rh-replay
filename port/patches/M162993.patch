@@ -1,0 +1,28 @@
+--- a/src/GroundTheory/Brauer/Splitting.lean
++++ b/src/GroundTheory/Brauer/Splitting.lean
+@@ -168,7 +168,7 @@
+ theorem isMulCommutative_adjoin_insert (F : Subalgebra K D) [IsMulCommutative F] {y : D}
+     (hy : y ∈ Subalgebra.centralizer K (F : Set D)) :
+     IsMulCommutative (Algebra.adjoin K (insert y (F : Set D))) := by
+-  refine Algebra.isMulCommutative_adjoin K fun a ha b hb ↦ ?_
++  refine Algebra.isMulCommutative_adjoin K fun a ha b hb _ ↦ show a * b = b * a from ?_
+   rw [Subalgebra.mem_centralizer_iff] at hy
+   rcases ha with rfl | ha <;> rcases hb with rfl | hb
+   · rfl
+@@ -228,14 +228,14 @@
+ theorem finrank_eq_degree_of_maximal (F : Subalgebra K D) [IsMulCommutative F]
+     (hF : Maximal (fun G : Subalgebra K D ↦ IsMulCommutative G) F) :
+     finrank K F = degree K D :=
+-  ((tfae_maximal_subfield F).out 0 3).mp hF
++  ((tfae_maximal_subfield F).out 1 4).mp hF
+ 
+ theorem nonempty_algEquiv_matrix_of_maximal (F : Subalgebra K D) [IsMulCommutative F]
+     (hF : Maximal (fun G : Subalgebra K D ↦ IsMulCommutative G) F) :
+     letI := fieldOfIsMulCommutative F
+     Nonempty (F ⊗[K] D ≃ₐ[F] Matrix (Fin (degree K D)) (Fin (degree K D)) F) := by
+   let _ := fieldOfIsMulCommutative F
+-  have h2 : finrank K F ^ 2 = finrank K D := ((tfae_maximal_subfield F).out 0 2).mp hF
++  have h2 : finrank K F ^ 2 = finrank K D := ((tfae_maximal_subfield F).out 1 3).mp hF
+   rw [← finrank_eq_degree_of_maximal F hF]
+   exact nonempty_algEquiv_matrix_of_algHom F.val h2
+ 

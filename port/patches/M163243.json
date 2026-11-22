@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.IdeleGroups.Rational",
+  "source_sha256": "fb8f6c78f08a64f628d5cb6fd6b8bebe8441c2d3d48ddf5b89fc903ba2a4849b",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

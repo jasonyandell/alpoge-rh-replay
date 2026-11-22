@@ -1,0 +1,19 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/Antisymmetric/LocallyFreeSpreadHyp.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/Antisymmetric/LocallyFreeSpreadHyp.lean
+@@ -72,14 +72,14 @@
+   ∀ (T : Type) [Fintype T] [DecidableEq T] (N j : ℕ)
+     (Om : T → Fin N → Fin N → Set (T × Fin N → ℝ)), IsCrossFamily j Om →
+     ∃ C : ℝ, ∀ P ∈ antiSpace T N j, ∃ l ∈ invForms T N j,
+-      ∀ m, |coeff m (P - delta T N * l)| ≤ C * supAbs (crossUnion j Om) P
++      ∀ m, |(P - delta T N * l).coeff m| ≤ C * supAbs (crossUnion j Om) P
+ 
+ def AntisymPerturbed.Statement : Prop :=
+   ∀ (T : Type) [Fintype T] [DecidableEq T] (N j : ℕ) (hj : 0 < j) (hjN : j < N) (h : Poly T N)
+     (K : T → Set (T × Fin N → ℝ)), IsAdjFamily j hj hjN h K →
+     ∃ C : ℝ, ∀ (P : Poly T N) (v ε : ℝ), P - v • h ∈ antiSpace T N j →
+       (∀ τ, ∀ x ∈ K τ, |eval x P| ≤ ε) →
+-      ∃ l ∈ invForms T N j, ∀ m, |coeff m (P - v • h - delta T N * l)| ≤ C * ε
++      ∃ l ∈ invForms T N j, ∀ m, |(P - v • h - delta T N * l).coeff m| ≤ C * ε
+ 
+ end Antisymmetric
+ 

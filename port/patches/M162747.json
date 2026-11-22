@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.HarishChandraCentre.Triangular",
+  "source_sha256": "a5aee85508c559126ee95add599d700b20c3d371cf31b755f7b54aad3ce6fa96",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only apart from computability markers. cartanSet and cartanSub become `noncomputable def`, because their bodies use the noncomputable `e`. Bodies and types are unchanged. Algebra.isMulCommutative_adjoin now takes `s.Pairwise Commute`, so the existing cartanSet_commute is passed through `fun a ha b hb _ => …` (Commute a b unfolds to a * b = b * a).",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

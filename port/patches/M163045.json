@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.Artin.MackeyFrobenius",
+  "source_sha256": "fd0be9fdc3465bd74457d707839c07bd8039d2022f7761184680f1012dbe2c5b",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

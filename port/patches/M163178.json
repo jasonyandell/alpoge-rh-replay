@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.CyclotomicCharacters.PadicUnitsLog",
+  "source_sha256": "0344569aca68e09aa61956d9d2cc359303724eecdef36c6cf145b857d684791c",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. ZMod.orderOf_one_add_mul_prime_pow dropped its `m ≠ 0` argument, which now follows from `m + 2 ≤ p * m`, so the `unitsLevel_ne_zero ℓ` argument is removed.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

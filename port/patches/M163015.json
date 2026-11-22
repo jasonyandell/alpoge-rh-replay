@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.Adele.IdeleBasis",
+  "source_sha256": "f39cee032be21d4e178d587f6c1bfc0786198507b2fc75994c59f3f6ec5ebaf9",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

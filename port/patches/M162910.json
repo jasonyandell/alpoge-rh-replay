@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.StableConjTorus",
+  "source_sha256": "7bb4538790dcd4766707d63fda451a38ddc5a10b88ae1b2ae49d6f6a404b9fed",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

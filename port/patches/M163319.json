@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.TateThesis.AdelicCharLocal",
+  "source_sha256": "6dbc62bc50c9a5ddaad5ef8aff42839ea360d619b33f50a10d97ec376e260470",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

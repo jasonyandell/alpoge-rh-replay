@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.DiscreteSpectrumAbstract",
+  "source_sha256": "51da3be9d4326628e7d88a3c5f184c56aea44a2f683b673a8c63655d058dcec7",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.Antisymmetric.StatementsGluing",
+  "source_sha256": "9f94d7850993ac03af32e0f140300af06833226a27a7b3a7f4cdfcc9005e261d",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

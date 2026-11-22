@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.AutomorphicForms.UnitaryGroupEquations",
+  "source_sha256": "0372a46fe20c7a98410db92ee2b3983250b08218eacc716922683364566307fc",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

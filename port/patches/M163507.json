@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.Antisymmetric.LocallyFreeSpreadHyp",
+  "source_sha256": "ee80facdabe6e767d6806a52490a8eb24c6de20b6da51478c5bddfe856944f47",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Definitions AntisymStable.Statement and AntisymPerturbed.Statement change in notation only. MvPolynomial is now an abbrev for AddMonoidAlgebra and the bare `coeff m p` no longer resolves, so `coeff m (…)` is written `(…).coeff m`. This is the same coefficient.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

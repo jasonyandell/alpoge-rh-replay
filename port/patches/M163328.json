@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.TateThesis.ConductorIdeal",
+  "source_sha256": "e4e37c6b919e3624eb773a2e868896ef34c1edf4228a2c9f2fa3d2f463aff4ad",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Definition idealLevel restored to its pinned meaning. On v4.36, `multiplicity a b` is `(emultiplicity a b).toNat`, which is 0 when the multiplicity is infinite; the pinned value was `(emultiplicity a b).untopD 1`, which is 1. idealLevel takes an arbitrary ideal 𝔪, including ⊥ where the multiplicity is infinite, so its body is now written `(emultiplicity v.asIdeal 𝔪).untopD 1`, the pinned definition unfolded and identical on every input. idealLevel_le_ker_iff (which assumes 𝔪 ≠ ⊥) rewrites this back to `multiplicity` with FiniteMultiplicity.of_prime_left before the unchanged rw chain. finprod_asIdeal_pow_dvd_iff still states `multiplicity v.asIdeal I`, but it assumes `I ≠ ⊥` and v.asIdeal is prime, so the multiplicity is finite and the old and new values agree; it is left unchanged. The reused-names audit reports only that theorem afterwards.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

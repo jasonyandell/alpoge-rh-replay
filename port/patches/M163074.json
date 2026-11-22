@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.GlobalFields.CompletionAtPlace.Integers",
+  "source_sha256": "ae026a99b66b52b687d1e06960afeca020f6ee049da701e41f2dd94e9c6a88e9",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. A local `have` type writes the value group as `ValueGroup₀ (v : _ →*₀ ℤᵐ⁰)`, the coercion Valued.mem_nhds now uses, in place of `ValueGroup₀ (.ofClass v)`.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}

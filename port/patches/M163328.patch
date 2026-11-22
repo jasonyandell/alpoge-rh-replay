@@ -1,0 +1,21 @@
+--- a/src/GroundTheory/GlobalFields/TateThesis/ConductorIdeal.lean
++++ b/src/GroundTheory/GlobalFields/TateThesis/ConductorIdeal.lean
+@@ -100,12 +100,16 @@
+   finprod_asIdeal_pow_ne_bot _
+ 
+ def idealLevel (𝔪 : Ideal (𝓞 K)) : Subgroup (FiniteAdeleRing (𝓞 K) K)ˣ :=
+-  finiteLevel fun v ↦ multiplicity v.asIdeal 𝔪
++  finiteLevel fun v ↦ (emultiplicity v.asIdeal 𝔪).untopD 1
+ 
+ theorem idealLevel_le_ker_iff (hH : NoSmallSubgroups H) (χ : (FiniteAdeleRing (𝓞 K) K)ˣ →* H)
+     (hχ : Continuous χ) {𝔪 : Ideal (𝓞 K)} (h𝔪 : 𝔪 ≠ ⊥) :
+     idealLevel 𝔪 ≤ χ.ker ↔ conductor χ ∣ 𝔪 := by
+-  rw [idealLevel, finiteLevel_le_ker_iff hH χ hχ, conductor,
++  have hm : (fun v : HeightOneSpectrum (𝓞 K) ↦ (emultiplicity v.asIdeal 𝔪).untopD 1) =
++      fun v ↦ multiplicity v.asIdeal 𝔪 := funext fun v ↦ by
++    rw [(FiniteMultiplicity.of_prime_left (HeightOneSpectrum.prime v) h𝔪).emultiplicity_eq_multiplicity]
++    rfl
++  rw [idealLevel, hm, finiteLevel_le_ker_iff hH χ hχ, conductor,
+     finprod_asIdeal_pow_dvd_iff (finite_support_conductorExponentAt hH χ hχ) h𝔪]
+ 
+ theorem dvd_conductor_iff (hH : NoSmallSubgroups H) (χ : (FiniteAdeleRing (𝓞 K) K)ˣ →* H)

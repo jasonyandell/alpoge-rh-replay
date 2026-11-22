@@ -1,0 +1,13 @@
+--- a/src/GroundTheory/GlobalFields/CompletionAtPlace/Integers.lean
++++ b/src/GroundTheory/GlobalFields/CompletionAtPlace/Integers.lean
+@@ -23,8 +23,8 @@
+   have h1 : {y : w.adicCompletion L | Valued.v.restrict (y - x) < γ.1} ∈ nhds x :=
+     Valued.mem_nhds.2 ⟨γ, subset_rfl⟩
+   have h2 : {y : w.adicCompletion L | Valued.v.restrict (y - x) <
+-      ((1 : (MonoidWithZeroHom.ValueGroup₀ (.ofClass (Valued.v :
+-        Valuation (w.adicCompletion L) ℤᵐ⁰)))ˣ) : _)} ∈ nhds x :=
++      ((1 : (MonoidWithZeroHom.ValueGroup₀ ((Valued.v :
++        Valuation (w.adicCompletion L) ℤᵐ⁰) : w.adicCompletion L →*₀ ℤᵐ⁰))ˣ) : _)} ∈ nhds x :=
+     Valued.mem_nhds.2 ⟨1, subset_rfl⟩
+   obtain ⟨k, hk1, hk2⟩ := (denseRange_algebraMap (R := 𝓞 L) (K := L) w).mem_nhds
+     (Filter.inter_mem h1 h2)

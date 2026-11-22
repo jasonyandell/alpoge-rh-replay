@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeMapArea",
+  "source_sha256": "1df61186f55aa637b9cb201f93498b184d4abf7c48cb34b42f05412dea8af7c5",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0282-lean436-20261122/P0282-receipt.json"
+}
