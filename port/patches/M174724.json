@@ -1,0 +1,8 @@
+{
+  "module": "ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.HalfLeNormOneSub",
+  "source_sha256": "50fe87a52ee8247a3b01c2aa33def766d534da136d9d5883fb572bc0c71e312e",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `continuous_finset_sum` renamed to `continuous_finsetSum` (same arguments), and the `IsOpen` proof of `{x | A ∧ B ∧ C}` now first rewrites with `Set.setOf_and` twice, because v4.36.0 no longer unifies that set with the intersection `{x | A} ∩ ({x | B} ∩ {x | C})` built by `IsOpen.inter`. The statement is unchanged.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0170-lean436-20261122/P0170-receipt.json"
+}

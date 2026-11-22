@@ -1,0 +1,19 @@
+--- a/src/ReciprocityTheory/ReductiveGroups/DiscreteSeries/TailIntegrals/HalfLeNormOneSub.lean
++++ b/src/ReciprocityTheory/ReductiveGroups/DiscreteSeries/TailIntegrals/HalfLeNormOneSub.lean
+@@ -44,12 +44,13 @@
+     volume (Bset q) ≠ 0 := by
+   have hc : Continuous (tW q) := by
+     unfold tW
+-    refine Continuous.sqrt (continuous_finset_sum _ fun i _ => ?_)
++    refine Continuous.sqrt (continuous_finsetSum _ fun i _ => ?_)
+     by_cases hi : i = q
+     · simp only [hi, ↓reduceIte]; exact continuous_const
+     · simp only [hi, ↓reduceIte]; exact Complex.continuous_normSq.comp (continuous_apply i)
+-  have hU : IsOpen {x : ι → ℂ | 1 / 2 < tW q x ∧ tW q x < 1 ∧ ‖x q‖ < 1} :=
+-    (isOpen_lt continuous_const hc).inter
++  have hU : IsOpen {x : ι → ℂ | 1 / 2 < tW q x ∧ tW q x < 1 ∧ ‖x q‖ < 1} := by
++    rw [Set.setOf_and, Set.setOf_and]
++    exact (isOpen_lt continuous_const hc).inter
+       ((isOpen_lt hc continuous_const).inter
+         (isOpen_lt (continuous_norm.comp (continuous_apply q)) continuous_const))
+   let x0 : ι → ℂ := fun i => if i = p then ((3 / 4 : ℝ) : ℂ) else 0
