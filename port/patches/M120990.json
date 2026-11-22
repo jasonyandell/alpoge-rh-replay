@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArtinianLimitLiftOfCompatible",
+  "source_sha256": "49003f02fffd88c8cade2e3182294e25a8ebfb77639f5194448bd93fe6fd3869",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0264-lean436-20261122-c/P0264-receipt.json"
+}
