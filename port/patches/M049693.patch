@@ -1,0 +1,17 @@
+--- a/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SepIntPolyRootModPrimeSq.lean
++++ b/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SepIntPolyRootModPrimeSq.lean
+@@ -10,8 +10,12 @@
+     (hf : (f.map (Int.castRingHom ℚ)).Separable) :
+     ∃ A B : ℤ[X], ∃ N : ℤ, N ≠ 0 ∧ A * f + B * derivative f = C N := by
+   obtain ⟨a, b, hab⟩ := hf
+-  obtain ⟨c1, hc1⟩ := IsLocalization.integerNormalization_map_to_map (nonZeroDivisors ℤ) a
+-  obtain ⟨c2, hc2⟩ := IsLocalization.integerNormalization_map_to_map (nonZeroDivisors ℤ) b
++  obtain ⟨c1, hc1⟩ : ∃ c : nonZeroDivisors ℤ,
++      (IsLocalization.integerNormalization (nonZeroDivisors ℤ) a).map (algebraMap ℤ ℚ) = (c : ℤ) • a :=
++    let ⟨c, hc, h⟩ := IsLocalization.integerNormalization_spec (nonZeroDivisors ℤ) a; ⟨⟨c, hc⟩, h⟩
++  obtain ⟨c2, hc2⟩ : ∃ c : nonZeroDivisors ℤ,
++      (IsLocalization.integerNormalization (nonZeroDivisors ℤ) b).map (algebraMap ℤ ℚ) = (c : ℤ) • b :=
++    let ⟨c, hc, h⟩ := IsLocalization.integerNormalization_spec (nonZeroDivisors ℤ) b; ⟨⟨c, hc⟩, h⟩
+   set A := IsLocalization.integerNormalization (nonZeroDivisors ℤ) a
+   set B := IsLocalization.integerNormalization (nonZeroDivisors ℤ) b
+   refine ⟨(c2 : ℤ) • A, (c1 : ℤ) • B, (c1 : ℤ) * c2, ?_, ?_⟩

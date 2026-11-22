@@ -1,0 +1,8 @@
+{
+  "module": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.SepIntPolyRootModPrimeSq",
+  "source_sha256": "81a0cc677fe34f6f3faf292688d000c9c56bb255f4cc7f50625dcae8a1224f6e",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only adaptation: IsLocalization.integerNormalization_map_to_map was replaced by integerNormalization_spec, which states ∃ b ∈ M, … = b • p rather than ∃ b : M, … = (b : R) • p. Restate the old conclusion locally from the new lemma (repackaging b and its membership as an element of nonZeroDivisors ℤ), so the rest of the proof is unchanged. No statement or definition changed.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0248-lean436-20261122/P0248-receipt.json"
+}
