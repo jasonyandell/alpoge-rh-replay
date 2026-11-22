@@ -1,0 +1,11 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/SquarefreeRootsInjective/CardLeSumOfCover.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/SquarefreeRootsInjective/CardLeSumOfCover.lean
+@@ -76,7 +76,7 @@
+       ⟨hℓ, hdv, Nat.mul_ne_zero (g_pow_sub_one_ne hg2 (by omega)) (g_pow_sub_one_ne hg2 he')⟩, hB⟩
+   · refine Finset.mem_filter.2 ⟨Multiset.mem_toFinset.2 ?_, hdy⟩
+     have hM : 1 < g ^ e' := Nat.one_lt_pow (by omega) hg2
+-    rw [mem_roots (FiniteField.X_pow_card_sub_X_ne_zero _ hM)]
++    rw [mem_roots (Polynomial.X_pow_sub_X_ne_zero hM)]
+     simp [hy]
+   · exact Finset.mem_filter.2 ⟨Multiset.mem_toFinset.2 ((mem_nthRoots (lp_pos hℓ)).2 hx), hdx⟩
+ 

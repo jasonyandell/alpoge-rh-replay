@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.RhsWInv",
+  "source_sha256": "63bc0df669a323d4c4e25d9b47d7d39924cf6342c152fda1380dc3c37a174604",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: two `measure_mono_null` calls get the superset `t` explicitly, because v4.36.0 elaborates the subset callback before inferring `t`. The reused-name audit flags `DescUniq` and `RInvNu` for `Measure.map`; the maps there are `rmulM b` and `orbV k r z'`, both continuous (`rmulM_cont`, `orbV_cont` in this module), hence measurable, so the pinned and target meanings agree.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

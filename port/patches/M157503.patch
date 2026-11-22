@@ -1,0 +1,20 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/WeightedLimitGauge/RhsWInv.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/WeightedLimitGauge/RhsWInv.lean
+@@ -63,7 +63,7 @@
+   have := hD.haarW'.1
+   rw [nuR, Measure.map_apply (meas_chartF hD.sec) (s := {x : Mt k r | Matrix.of x ∉ UWb k r})
+     HU.amb_closed.isOpen_compl.measurableSet]
+-  exact measure_mono_null (fun q hq hg => hq (mem_chart hD hg)) (src_null hD)
++  exact measure_mono_null (t := (goodS k r z z')ᶜ) (fun q hq hg => hq (mem_chart hD hg)) (src_null hD)
+ 
+ theorem rhsWInv_of (hD : DescUniq) (hR : RInvNu) (hO : OrbInv) : RhsWInv := by
+   intro k r z z' μW μW' a a' μsec hd s hs φ hφ
+@@ -76,7 +76,7 @@
+   have hC1 : ((nuR k r z z' μW μW' μsec).map (lmulM s)) {x | Matrix.of x ∉ UWb k r} = 0 := by
+     rw [Measure.map_apply hl (s := {x : Mt k r | Matrix.of x ∉ UWb k r})
+       HU.amb_closed.isOpen_compl.measurableSet]
+-    refine measure_mono_null (fun x (hx : Matrix.of (lmulM s x) ∉ UWb k r) (hx' : Matrix.of x ∈ UWb k r) =>
++    refine measure_mono_null (t := {x : Mt k r | Matrix.of x ∉ UWb k r}) (fun x (hx : Matrix.of (lmulM s x) ∉ UWb k r) (hx' : Matrix.of x ∈ UWb k r) =>
+       hx (HU.uwb_mul hs hx')) (nu_conc hd)
+   have hR1 : ∀ b ∈ UWset k r z', ((nuR k r z z' μW μW' μsec).map (lmulM s)).map (rmulM b) =
+       (nuR k r z z' μW μW' μsec).map (lmulM s) := by

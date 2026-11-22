@@ -1,0 +1,11 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/UnitaryApproximation/UnitaryScalars.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/UnitaryApproximation/UnitaryScalars.lean
+@@ -73,7 +73,7 @@
+     by_contra h
+     obtain ⟨M, hM, hxM⟩ := exists_max_ideal_of_mem_nonunits (mem_nonunits_iff.2 h)
+     have hP : (M.comap (algebraMap O S)).IsMaximal :=
+-      Ideal.isMaximal_comap_of_isIntegral_of_isMaximal M
++      Ideal.isMaximal_under_of_isIntegral_of_isMaximal (R := O) M
+     have hπM : algebraMap O S πO ∈ M := by
+       have : πO ∈ M.comap (algebraMap O S) := by
+         rw [IsLocalRing.eq_maximalIdeal hP]; exact hπmax

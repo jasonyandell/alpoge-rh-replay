@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ModUni",
+  "source_sha256": "cb095f21520d31051eb634c2e07c9dd468b44192b863283f4ba56b998272a83e",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

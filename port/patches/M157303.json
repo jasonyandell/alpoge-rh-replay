@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.UnitaryScalars",
+  "source_sha256": "f0bf98688fdb365ff6b51b38fca1e709b320d1d27399040a3b2a36cee1245f18",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `Ideal.isMaximal_comap_of_isIntegral_of_isMaximal M` (algebra-map form) became `Ideal.isMaximal_under_of_isIntegral_of_isMaximal (R := O) M`; `M.under O` is by definition `M.comap (algebraMap O S)`, so the `have` type is unchanged.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

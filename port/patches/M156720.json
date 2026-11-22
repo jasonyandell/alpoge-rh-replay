@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SquarefreeRootsInjective.WitMain",
+  "source_sha256": "be864d4d46d8d953dfbf08b144865875cafdc4949d0e45f37571cc14b36f4c95",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `padicValNat.eq_zero_of_not_dvd` is now a deprecated alias stated with `multiplicity`, so in two places `rw [← Nat.padicValNat_def] at hv` turns it back into the `padicValNat ... = 0` fact that the following `rw` needs.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

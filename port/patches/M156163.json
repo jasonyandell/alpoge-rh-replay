@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MonomialFrameSpan.SatProj",
+  "source_sha256": "373fe19b2667083075dbd2b8feac061bf2fb9171231c94b580111328b3c5ea3a",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `Finsupp.mapDomain_apply (emb_inj t)` became `Finsupp.mapDomain_apply_of_injective (emb_inj t)` (v4.36.0 rename for the injective case), and the bare `coeff m P` under `open MvPolynomial` became `P.coeff m` because MvPolynomial is now an abbrev of AddMonoidAlgebra. Same terms.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

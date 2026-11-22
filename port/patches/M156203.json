@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OddDualWeylJacobian.EvalDuality",
+  "source_sha256": "782c149caffea04b7d9817b0d1064fa3964c1e01296eef489c461892200056bf",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `MvPolynomial.coeff d F'` in a `show` became `F'.coeff d`; the constant `MvPolynomial.coeff` no longer exists and this is the same coefficient function.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

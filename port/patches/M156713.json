@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SquarefreeRootsInjective.CardLeSumOfCover",
+  "source_sha256": "90c7b55f821353c6c9a743d470411f7947b644a3abd6b1cfa6cb315c65ffd130",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: the deprecated `FiniteField.X_pow_card_sub_X_ne_zero _ hM` (whose arguments changed) became `Polynomial.X_pow_sub_X_ne_zero hM`, which states the same `X ^ n - X ≠ 0` from `1 < n`.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

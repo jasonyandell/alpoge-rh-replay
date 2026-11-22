@@ -1,0 +1,18 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/SquarefreeRootsInjective/WitMain.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/SquarefreeRootsInjective/WitMain.lean
+@@ -78,6 +78,7 @@
+   refine ⟨_, _, x, y, hy1, hle, hdeg, ?_, rfl, rfl, hprod, pow_card_minpoly y, ?_⟩
+   · by_contra hnd
+     have hv := padicValNat.eq_zero_of_not_dvd hnd
++    rw [← Nat.padicValNat_def] at hv
+     have h1 := pow_eq_part_pow_of_dvd ℓ hℓ x _ (mul_ne_zero hNe hNe')
+       (dvd_mul_of_dvd_left hox _)
+     have h2 := pow_eq_part_pow_of_dvd ℓ hℓ y _ (mul_ne_zero hNe hNe')
+@@ -144,6 +145,7 @@
+   refine ⟨_, _, x, by omega, hxr, hj1, h2j, ?_, rfl, hxd, ?_⟩
+   · by_contra hnd
+     have hv := padicValNat.eq_zero_of_not_dvd hnd
++    rw [← Nat.padicValNat_def] at hv
+     rw [hv, pow_zero, pow_one, pow_one] at hxL hyL
+     exact hxy (by rw [hxL, hyL, hp])
+   · rw [mul_comm, pow_mul]

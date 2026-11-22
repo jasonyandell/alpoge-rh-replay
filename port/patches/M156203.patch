@@ -1,0 +1,13 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/OddDualWeylJacobian/EvalDuality.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/OddDualWeylJacobian/EvalDuality.lean
+@@ -113,8 +113,8 @@
+     have hprod : ∏ i ∈ d.support, (c * b i) ^ d i = c ^ D * ∏ i ∈ d.support, b i ^ d i := by
+       rw [← hdeg', ← Finset.prod_pow_eq_pow_sum, ← Finset.prod_mul_distrib]
+       exact Finset.prod_congr rfl fun i _ => _root_.mul_pow _ _ _
+-    show MvPolynomial.coeff d F' * ∏ i ∈ d.support, (c * b i) ^ d i =
+-      c ^ D * (MvPolynomial.coeff d F' * ∏ i ∈ d.support, b i ^ d i)
++    show F'.coeff d * ∏ i ∈ d.support, (c * b i) ^ d i =
++      c ^ D * (F'.coeff d * ∏ i ∈ d.support, b i ^ d i)
+     rw [hprod]
+     ring
+   have heval : MvPolynomial.eval ρ (dualSub K (m + 1) F') =

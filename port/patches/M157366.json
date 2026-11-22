@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryQuotientCompactness.ModCore",
+  "source_sha256": "2816b82d19d96867919b052df11d945dfb197714ade2d0c66dda4dc717f6c667",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: `continuous_finset_sum` renamed to `continuous_finsetSum`, and the two `Measure.map_smul` rewrites now get the a.e.-measurability argument v4.36.0 requires (`(measurable_mul_const _).aemeasurable`, `hφ.aemeasurable`). The reused-name audit flags `map_mul_right_haar` for `Measure.map`; the map `(· * g)` is right multiplication in a topological group, hence measurable, so the pinned and target meanings agree.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.PairingPowMemSymbolRange",
+  "source_sha256": "dba495997eb16ac9a44b77759e8b176884969e2e8aabd93a833951386c2adcdb",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only: bare `coeff 0 g` and `coeff m g` (under `open MvPolynomial`) became `g.coeff 0` and `g.coeff m`; notation change only.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0331-lean436-20261122/P0331-receipt.json"
+}
