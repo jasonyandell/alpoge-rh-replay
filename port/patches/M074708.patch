@@ -1,0 +1,11 @@
+--- a/src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/TotalDegreeCMulXMulX.lean
++++ b/src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/TotalDegreeCMulXMulX.lean
+@@ -107,7 +107,7 @@
+   choose l hl using fun i => Ideal.Quotient.mk_surjective (I := maxIdeal K) (x.1 i)
+   have hval : π (l 0 * l 0 + S * (l 0 * l 1) + T * (l 1 * l 1) + (-Cc) * (l 2 * l 2)) = 0 := by
+     have := x.2
+-    simp only [f, map_add, map_mul, eval_C, eval_X, map_neg, one_mul] at this
++    simp only [f, map_add, map_mul, eval_C, eval_X, one_mul] at this
+     simp only [map_add, map_mul, map_neg, π, hl]
+     linear_combination this
+   have hmem := (Ideal.Quotient.eq_zero_iff_mem).1 hval

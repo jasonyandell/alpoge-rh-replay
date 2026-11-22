@@ -1,0 +1,11 @@
+--- a/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/AssociatedPrimeLocalizationDvr.lean
++++ b/src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/AssociatedPrimeLocalizationDvr.lean
+@@ -77,7 +77,7 @@
+   have hf : ¬ IsField S := by
+     rw [IsLocalRing.isField_iff_maximalIdeal_eq, ht]
+     simpa using ht0
+-  refine ((IsDiscreteValuationRing.TFAE S hf).out 4 0).mp ?_
++  refine ((IsDiscreteValuationRing.TFAE S hf).out 5 1).mp ?_
+   exact ⟨t, ht⟩
+ 
+ theorem exists_isDiscreteValuationRing_of_mem_associatedPrimes_quotient :
