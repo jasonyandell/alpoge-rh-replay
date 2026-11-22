@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StConeSliceIdeal",
+  "source_sha256": "8848b7c3e760191cd1c3591e18301cf5105c8c7cd1cc82b2e5a0b63e9c1af227",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0165-lean436-20261122/P0165-receipt.json"
+}

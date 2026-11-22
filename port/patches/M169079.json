@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StConeVanishingHomog",
+  "source_sha256": "e2bdd98a1a25a8d03e62e81df123a29b64a5cf58228055df2f541ddfc61200c9",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0165-lean436-20261122/P0165-receipt.json"
+}

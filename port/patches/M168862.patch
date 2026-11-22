@@ -1,0 +1,127 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/MultinomialWeights/SecondVolumeConstantNonneg.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/MultinomialWeights/SecondVolumeConstantNonneg.lean
+@@ -65,8 +65,8 @@
+ def cFl : ℝ := degFl T N (basePoint T N) / eval (basePoint T N) (antisymDelta T N)
+ 
+ def polar (k : ℕ) (P F : MvPolynomial (T × Fin N) ℝ) : ℝ :=
+-  ∑ m ∈ (homogeneousComponent k F).support, coeff m F *
+-    ((-1 : ℝ) ^ k * ((m.prod fun _ n => (n.factorial : ℝ)) / (k.factorial : ℝ)) * coeff m P)
++  ∑ m ∈ (homogeneousComponent k F).support, F.coeff m *
++    ((-1 : ℝ) ^ k * ((m.prod fun _ n => (n.factorial : ℝ)) / (k.factorial : ℝ)) * P.coeff m)
+ 
+ def derivTerm (j : ℕ) (al be : T → ℝ) (F : MvPolynomial (T × Fin N) ℝ) : ℝ :=
+   ∑ τ, flagDegree T N (∑ i : Fin N, (if i.val < j then al τ else be τ) • pderiv (τ, i) F)
+@@ -128,8 +128,8 @@
+   P_homogeneous : ∀ B : ℕ, 2 ≤ B → (P B).IsHomogeneous (antisymDegree T N + 1)
+   Ps_totalDegree : ∀ B : ℕ, 2 ≤ B → (Ps B).totalDegree ≤ antisymDegree T N + 1
+   Ps_at_zero : ∀ B : ℕ, 2 ≤ B → ∀ lam, evalS lam 0 (Ps B) = eval lam (P B)
+-  P_coeff : ∀ B : ℕ, 2 ≤ B → ∀ m, |coeff m (P B)| ≤ C2 * Real.log B
+-  Ps_coeff : ∀ B : ℕ, 2 ≤ B → ∀ m, |coeff m (Ps B)| ≤ C2 * Real.log B
++  P_coeff : ∀ B : ℕ, 2 ≤ B → ∀ m, |(P B).coeff m| ≤ C2 * Real.log B
++  Ps_coeff : ∀ B : ℕ, 2 ≤ B → ∀ m, |(Ps B).coeff m| ≤ C2 * Real.log B
+   w0 : T × Fin N → ℝ
+   L : (T × Fin N → ℝ) →ₗ[ℝ] Cl
+   A' : Cl
+@@ -144,7 +144,7 @@
+   L_nef : ∀ lam, IsDominantWeight lam → L lam ∈ nef
+   A'_ample : A' ∈ ample
+   bd'_effective : bd' ∈ effective
+-  inter : Comp → MultilinearMap ℝ (fun _ : Fin (antisymDegree T N) => Cl) ℝ
++  inter : Comp → MultilinearMap (RingHom.id ℝ) (fun _ : Fin (antisymDegree T N) => Cl) ℝ
+   inter_symm : ∀ c v (σ : Equiv.Perm (Fin (antisymDegree T N))), inter c (v ∘ σ) = inter c v
+   kleiman_nef : ∀ c v, (∀ i, v i ∈ nef) → 0 ≤ inter c v
+   kleiman_effective : ∀ c v i₀, v i₀ ∈ effective → (∀ i, i ≠ i₀ → v i ∈ nef) → 0 ≤ inter c v
+@@ -360,7 +360,7 @@
+ def RBDecomposition.intersectionNumber_baseChange : Prop :=
+   ∀ V' : Submodule ℝ (MvPolynomial (T × Fin N) ℝ), IsComplInV T N j V' →
+     ∃ C B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ l ∈ antisymInv T N j, ∃ E ∈ V',
+-      V.RB B = antisymDelta T N * l + E ∧ ∀ m, |coeff m E| ≤ C * Real.log B / B
++      V.RB B = antisymDelta T N * l + E ∧ ∀ m, |E.coeff m| ≤ C * Real.log B / B
+ 
+ def DefineAlBe.intersectionNumber_baseChange : Prop :=
+   ∀ l ∈ antisymInv T N j, ∃! ab : (T → ℝ) × (T → ℝ), l = V.alBeScale • invForm T N j ab.1 ab.2
+@@ -369,7 +369,7 @@
+   ∀ V' : Submodule ℝ (MvPolynomial (T × Fin N) ℝ), IsComplInV T N j V' →
+     ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ,
+       V.RB B - antisymDelta T N * (V.alBeScale • invForm T N j al be) ∈ V' ∧
+-      (∃ E, V.IsThmBError B al be E ∧ ∀ m, |coeff m E| ≤ CB * Real.log B / B)
++      (∃ E, V.IsThmBError B al be E ∧ ∀ m, |E.coeff m| ≤ CB * Real.log B / B)
+ 
+ def ComplementChange.intersectionNumber_baseChange : Prop :=
+   ∀ V' V'' : Submodule ℝ (MvPolynomial (T × Fin N) ℝ), IsComplInV T N j V' → IsComplInV T N j V'' →
+@@ -385,7 +385,7 @@
+       ∀ τ, |al τ| ≤ C * Real.log B ∧ |be τ| ≤ C * Real.log B
+ 
+ def CorollaryBPrime.intersectionNumber_baseChange : Prop :=
+-  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |coeff m E| ≤ CB * Real.log B / B) ∧
++  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |E.coeff m| ≤ CB * Real.log B / B) ∧
+     ∃ EE : MvPolynomial (T × Fin N) ℝ →ₗ[ℝ] ℝ,
+       (∀ F : MvPolynomial (T × Fin N) ℝ, F.IsHomogeneous (antisymDegree T N + 1) →
+         V.PP B F = V.vol * (V.hh F - derivTerm T N j al be F) + EE F) ∧
+@@ -394,12 +394,12 @@
+ 
+ def CorollaryBPrimeMonomial.intersectionNumber_baseChange : Prop :=
+   ∀ (B : ℕ), 2 ≤ B → ∀ (al be : T → ℝ) (E : MvPolynomial (T × Fin N) ℝ) (C : ℝ),
+-    V.IsThmBError B al be E → (∀ m, |coeff m E| ≤ C) →
++    V.IsThmBError B al be E → (∀ m, |E.coeff m| ≤ C) →
+     ∀ m : T × Fin N →₀ ℕ, m.degree = antisymDegree T N + 1 →
+       |V.PP B (monomial m 1) - V.vol * (V.hh (monomial m 1) - derivTerm T N j al be (monomial m 1))| ≤ C
+ 
+ def CorollaryBSecondOne.intersectionNumber_baseChange : Prop :=
+-  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |coeff m E| ≤ CB * Real.log B / B) ∧
++  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |E.coeff m| ≤ CB * Real.log B / B) ∧
+     ∃ EE : MvPolynomial (T × Fin N) ℝ →ₗ[ℝ] ℝ,
+       (∀ F : MvPolynomial (T × Fin N) ℝ, F.IsHomogeneous (antisymDegree T N + 1) →
+         V.PP B F = V.vol * (V.hh F - derivTerm T N j al be F) + EE F) ∧
+@@ -410,7 +410,7 @@
+           V.vol * (j * al τ + ((N : ℝ) - j) * be τ) * flagDegree T N Q + EE (powerSumRoots T N 1 τ * Q)
+ 
+ def CorollaryBSecondTwo.intersectionNumber_baseChange : Prop :=
+-  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |coeff m E| ≤ CB * Real.log B / B) ∧
++  ∃ CB B₁ : ℝ, ∀ B : ℕ, B₁ ≤ B → ∃ al be : T → ℝ, (∃ E, V.IsThmBError B al be E ∧ ∀ m, |E.coeff m| ≤ CB * Real.log B / B) ∧
+     ∃ EE : MvPolynomial (T × Fin N) ℝ →ₗ[ℝ] ℝ,
+       (∀ F : MvPolynomial (T × Fin N) ℝ, F.IsHomogeneous (antisymDegree T N + 1) →
+         V.PP B F = V.vol * (V.hh F - derivTerm T N j al be F) + EE F) ∧
+@@ -705,7 +705,7 @@
+     simp only [linForm, Pi.smul_apply, smul_eq_mul, mul_smul, ← Finset.smul_sum, smul_neg,
+       RingHom.id_apply]
+ 
+-def sampleInter : MultilinearMap ℝ (fun _ : Fin (antisymDegree (Fin 3) 2) => Fin 3 × Fin 2 → ℝ) ℝ :=
++def sampleInter : MultilinearMap (RingHom.id ℝ) (fun _ : Fin (antisymDegree (Fin 3) 2) => Fin 3 × Fin 2 → ℝ) ℝ :=
+   (flagDegree (Fin 3) 2).compMultilinearMap
+     ((MultilinearMap.mkPiAlgebra ℝ (Fin (antisymDegree (Fin 3) 2)) (MvPolynomial (Fin 3 × Fin 2) ℝ)).compLinearMap
+       fun _ => linFormL)
+@@ -747,27 +747,27 @@
+   rw [sampleInter_apply, Finset.prod_const, Finset.card_univ, Fintype.card_fin, ← degFl_three]
+   rfl
+ 
+-def coeffSum {σ : Type} (Q : MvPolynomial σ ℝ) : ℝ := ∑ m ∈ Q.support, |coeff m Q|
++def coeffSum {σ : Type} (Q : MvPolynomial σ ℝ) : ℝ := ∑ m ∈ Q.support, |Q.coeff m|
+ 
+ theorem coeffSum_nonneg {σ : Type} (Q : MvPolynomial σ ℝ) : 0 ≤ coeffSum Q :=
+   Finset.sum_nonneg fun _ _ => abs_nonneg _
+ 
+ theorem abs_coeff_le_coeffSum {σ : Type} (Q : MvPolynomial σ ℝ) (m : σ →₀ ℕ) :
+-    |coeff m Q| ≤ coeffSum Q := by
++    |Q.coeff m| ≤ coeffSum Q := by
+   by_cases h : m ∈ Q.support
+-  · exact Finset.single_le_sum (f := fun m => |coeff m Q|) (fun _ _ => abs_nonneg _) h
+-  · have h0 : coeff m Q = 0 := by
++  · exact Finset.single_le_sum (f := fun m => |Q.coeff m|) (fun _ _ => abs_nonneg _) h
++  · have h0 : Q.coeff m = 0 := by
+       by_contra h'
+       exact h (mem_support_iff.2 h')
+     rw [h0, abs_zero]
+     exact coeffSum_nonneg Q
+ 
+ theorem abs_coeff_le_log {σ : Type} (Q : MvPolynomial σ ℝ) (K : ℝ) (hK : coeffSum Q ≤ K)
+-    (B : ℕ) (hB : 2 ≤ B) (m : σ →₀ ℕ) : |coeff m Q| ≤ K / Real.log 2 * Real.log B := by
++    (B : ℕ) (hB : 2 ≤ B) (m : σ →₀ ℕ) : |Q.coeff m| ≤ K / Real.log 2 * Real.log B := by
+   have h2 : 0 < Real.log 2 := Real.log_pos (by norm_num)
+   have hB' : Real.log 2 ≤ Real.log B := Real.log_le_log (by norm_num) (by exact_mod_cast hB)
+   have hK0 : 0 ≤ K := (coeffSum_nonneg Q).trans hK
+-  calc |coeff m Q| ≤ K := (abs_coeff_le_coeffSum Q m).trans hK
++  calc |Q.coeff m| ≤ K := (abs_coeff_le_coeffSum Q m).trans hK
+     _ = K / Real.log 2 * Real.log 2 := by rw [div_mul_cancel₀ _ h2.ne']
+     _ ≤ K / Real.log 2 * Real.log B := mul_le_mul_of_nonneg_left hB' (div_nonneg hK0 h2.le)
+ 

@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.MultinomialWeights.SecondVolumeConstantNonneg",
+  "source_sha256": "ae6d913715dafe4b2a3ccf5c96bcaedb2c1bf5b29330af638fc9b9dc227e3072",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Replace MvPolynomial.coeff m P with P.coeff m throughout, which reads the same coefficient indexed by m in the definitions and statements. Use MultilinearMap (RingHom.id ℝ) in VolumeSystem.inter and sampleInter, since semilinearity along the identity is ordinary ℝ-multilinearity in each argument.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0165-lean436-20261122/P0165-receipt.json"
+}
