@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.PiCoord",
+  "source_sha256": "157b6488cb1ac1f8e50342e447c7fb00b2f30eb504b925bacc7a73d11948a3c2",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. measurable_pi_lambda (now a deprecated alias of Measurable.of_eval with a different argument shape) is written `Measurable.of_eval fun v => …` in five places, as in upstream's merged patches. Reused-name audit: measurePreserving_piProdEquiv uses Measure.prod. Every second factor is s-finite by the declaration's own hypotheses: `ν v` is SigmaFinite by [∀ v, SigmaFinite (ν v)], and `Measure.pi fun v => ν v` is a finite product (Fintype V) of sigma-finite measures, so it is sigma-finite. The meaning is unchanged.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

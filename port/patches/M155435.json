@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MulEquivHaarCharEqOfChart",
+  "source_sha256": "feeb62eeccc22346a4e472d0cbaddc9d4f94fae6760d3d1a85794845928d1411",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. Measure.map_smul now takes an AEMeasurable argument, supplied as hχm.aemeasurable. Reused-name audit: mulEquivHaarChar_eq_of_chart uses Measure.map χ with hχm : Measurable χ among its hypotheses. shear_map maps by a function that is measurable because hf : Measurable f, and its Measure.prod second factor ν is s-finite by [SFinite ν]. The side conditions hold, so the meaning is unchanged.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HighestWeightFixedVectors.MonomialMemGe",
+  "source_sha256": "ea3d8338cc9101abd5d39ab29e3b5603a7a45af1de51d9a6e2e38c7ea0c8f033",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Definition Ge (its carrier) and theorem mem_Ge change in notation only: `coeff m F` becomes `F.coeff m`, the same coefficient. In proofs: coeff_add becomes the protected MvPolynomial.coeff_add, coeff_zero becomes MvPolynomial.coeff_zero with Finsupp.zero_apply, Polynomial.eval_finset_sum is renamed Polynomial.eval_finsetSum, and `Polynomial.coeff q k` in a congrArg becomes `AddMonoidAlgebra.coeff q k`.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

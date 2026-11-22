@@ -1,0 +1,27 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ArchimedeanOrbitMeasures/PiCoord.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ArchimedeanOrbitMeasures/PiCoord.lean
+@@ -77,9 +77,9 @@
+           rw [Equiv.apply_symm_apply]
+           rfl
+         rw [this]
+-        exact measurable_pi_lambda _ fun v =>
++        exact Measurable.of_eval fun v =>
+           (PiLp.volume_preserving_toLp (α v)).measurable.comp
+-            (measurable_pi_lambda _ fun a => (measurable_pi_apply _).comp (PiLp.volume_preserving_ofLp _).measurable) }
++            (Measurable.of_eval fun a => (measurable_pi_apply _).comp (PiLp.volume_preserving_ofLp _).measurable) }
+   have hFe : MeasurePreserving Fe (Measure.pi fun v => volume) volume := hF
+   have key := hFe.symm.comp hGe
+   convert key using 1
+@@ -93,9 +93,9 @@
+   invFun p v := (p.1 v, p.2 v)
+   left_inv _ := rfl
+   right_inv _ := rfl
+-  measurable_toFun := (measurable_pi_lambda _ fun v => measurable_fst.comp (measurable_pi_apply v)).prodMk
+-    (measurable_pi_lambda _ fun v => measurable_snd.comp (measurable_pi_apply v))
+-  measurable_invFun := measurable_pi_lambda _ fun v =>
++  measurable_toFun := (Measurable.of_eval fun v => measurable_fst.comp (measurable_pi_apply v)).prodMk
++    (Measurable.of_eval fun v => measurable_snd.comp (measurable_pi_apply v))
++  measurable_invFun := Measurable.of_eval fun v =>
+     ((measurable_pi_apply v).comp measurable_fst).prodMk ((measurable_pi_apply v).comp measurable_snd)
+ 
+ theorem measurePreserving_piProdEquiv {V : Type} [Fintype V] (A B : V → Type) [∀ v, MeasurableSpace (A v)]

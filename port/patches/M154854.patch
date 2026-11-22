@@ -1,0 +1,13 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ExplicitFormula/LGrowthGamma.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/ExplicitFormula/LGrowthGamma.lean
+@@ -168,8 +168,8 @@
+   have hre : (1 / 2 : ℝ) ≤ w.re := hw'.1
+   apply DifferentiableAt.differentiableWithinAt
+   unfold frobeniusStickelbergerDetMulSigmaCube
+-  apply DifferentiableAt.div
+-  · apply DifferentiableAt.mul
++  apply DifferentiableAt.fun_div
++  · apply DifferentiableAt.fun_mul
+     · apply Complex.differentiableAt_Gamma
+       intro m h
+       have := congrArg Complex.re h

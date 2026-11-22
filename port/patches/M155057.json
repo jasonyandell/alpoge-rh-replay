@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandPairConvolution.Unimod",
+  "source_sha256": "4d84b1e4570d6bf39786f903bf71f49ef2c1aa479c41c76504129fa9d8844d16",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. `inv_apply` is now ambiguous with the root lemma, so it is written Measure.inv_apply, the lemma the proof meant.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DyadicStableLattices.RatIntOfIntegral",
+  "source_sha256": "d0ad04e922568f2463e593f33a8488e2127647c4a5a7cf27572b6d47e92ac95f",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. isIntegral_algebraMap_iff no longer takes an injectivity argument; it uses a FaithfulSMul instance, which is inferred for ℚ and this field. So `(isIntegral_algebraMap_iff hinj).1 h` becomes `isIntegral_algebraMap_iff.1 h`, as in upstream's merged patches.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.LGrowthGamma",
+  "source_sha256": "60778226a4026264304015ff915babcdc576f1be43e87341dec1a70615347d42",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. DifferentiableAt.div and DifferentiableAt.mul are now stated for the pointwise `c / d` and `a * b`. Applying them to a lambda timed out in higher-order unification, so the lambda versions DifferentiableAt.fun_div and DifferentiableAt.fun_mul are applied instead. Each has the same arguments and conclusion as the pinned lemma.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

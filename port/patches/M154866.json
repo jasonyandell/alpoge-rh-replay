@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.NormLogDerivReflLe",
+  "source_sha256": "0e6af9d43220fa030088d6c9f6c045aedef62fabe6863367bed37f1c101d7bbd",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. DifferentiableAt.finset_prod is renamed DifferentiableAt.finsetProd. logDeriv_mul and logDeriv_prod are now stated for pointwise operations, so their lambda versions logDeriv_fun_mul and logDeriv_fun_prod are used, with the same arguments.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}

@@ -1,0 +1,11 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/IwasawaMeasureExistence/MulEquivHaarCharEqOfChart.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/IwasawaMeasureExistence/MulEquivHaarCharEqOfChart.lean
+@@ -34,7 +34,7 @@
+   have hcomp : χ ∘ φ = L ∘ χ := funext h
+   have h1 : mulEquivHaarChar φ • map L ν = ν := by
+     have e := congrArg (Measure.map χ) (mulEquivHaarChar_smul_map μ φ)
+-    rw [Measure.map_smul, Measure.map_map hχm hφ, hcomp, ← Measure.map_map hL hχm, hχ] at e
++    rw [Measure.map_smul _ hχm.aemeasurable, Measure.map_map hχm hφ, hcomp, ← Measure.map_map hL hχm, hχ] at e
+     exact e
+   have h2 : addEquivAddHaarChar L • map L ν = ν := addEquivAddHaarChar_smul_map ν L
+   have h3 : addEquivAddHaarChar L • ν = mulEquivHaarChar φ • ν := by

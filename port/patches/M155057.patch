@@ -1,0 +1,13 @@
+--- a/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/GelfandPairConvolution/Unimod.lean
++++ b/src/Formalism/PeriodIntegrals/UnitaryGroupMassFormula/GelfandPairConvolution/Unimod.lean
+@@ -28,8 +28,8 @@
+ 
+ theorem isInvInvariant_of_compact (μ : Measure G) [μ.IsHaarMeasure] : μ.IsInvInvariant := by
+   have := isMulRightInvariant_of_compact μ
+-  have : IsFiniteMeasure μ.inv := ⟨by rw [inv_apply, Set.inv_univ]; exact measure_lt_top _ _⟩
+-  exact ⟨eq_of_isMulLeftInvariant_of_univ μ μ.inv (by rw [inv_apply, Set.inv_univ])⟩
++  have : IsFiniteMeasure μ.inv := ⟨by rw [Measure.inv_apply, Set.inv_univ]; exact measure_lt_top _ _⟩
++  exact ⟨eq_of_isMulLeftInvariant_of_univ μ μ.inv (by rw [Measure.inv_apply, Set.inv_univ])⟩
+ 
+ theorem measurePreserving_of_hom (μ : Measure G) [μ.IsHaarMeasure] (σ : G →* G)
+     (hc : Continuous σ) (hs : Function.Surjective σ) : MeasurePreserving σ μ μ :=

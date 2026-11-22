@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramInjectivity.GramVanish",
+  "source_sha256": "d66efa9cacf928e2008aaa89fa88fc4b45b88996a59a5a0a3df957e486e5a41a",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only. MvPolynomial is now an abbrev for AddMonoidAlgebra, so the bare `coeff s p` becomes `p.coeff s` and a lambda binder gets its type. The protected MvPolynomial.coeff_zero is now the function equality, so it is followed by Finsupp.zero_apply.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0075-lean436-20261122/P0075-receipt.json"
+}
