@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.DegreeTautologicalLineProjectiveLine",
+  "source_sha256": "b9695abc26d2951fcc1988e8f8e5bf795697cc60ab5bffd8ead632b01065707b",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only adaptation: MvPolynomial.coeff_add is now protected, so under open MvPolynomial the bare name no longer resolves; qualify it. No statement or definition changed.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0264-lean436-20261122/P0264-receipt.json"
+}

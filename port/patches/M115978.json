@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicArithmetic.OrbitLabellings.ColDefs",
+  "source_sha256": "a51e3b45858adebb47620b10c2ea0659b72123743e7ef943db7fb7f924b7f766",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0264-lean436-20261122/P0264-receipt.json"
+}
