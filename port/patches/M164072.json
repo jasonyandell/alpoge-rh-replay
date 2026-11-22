@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PDerivationAdicCompletion",
+  "source_sha256": "9b28c061b2f849967b8c6024f9b8e9e0758c766a5c97664048d5584bf9c38a47",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

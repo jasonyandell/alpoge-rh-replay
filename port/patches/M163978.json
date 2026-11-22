@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.OsgoodSeparate",
+  "source_sha256": "4fb4cad11574128c2fd4c0a810bb15a4a4667cbec2567b60988331a907e9ea70",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

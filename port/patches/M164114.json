@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PFormalFibreQuotient",
+  "source_sha256": "ebac249c061ddea626eef72ecdfd31b63eda8e7a23063c668adf28b9e3812a8c",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

@@ -1,0 +1,12 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PFiniteProjectionCluster.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PFiniteProjectionCluster.lean
+@@ -43,7 +43,8 @@
+     ∑ j, (1 + ∑ i ∈ Finset.range (P j).natDegree, ‖eval y ((P j).coeff i)‖)
+   have hg : Continuous g :=
+     continuous_finsetSum _ fun j _ => continuous_const.add
+-      (continuous_finsetSum _ fun i _ => (MvPolynomial.continuous_eval _).norm)
++      (continuous_finsetSum (Finset.range (P j).natDegree) fun i _ =>
++        (MvPolynomial.continuous_eval ((P j).coeff i)).norm)
+   obtain ⟨C, hC⟩ := (isCompact_closedBall c R).exists_bound_of_continuousOn hg.continuousOn
+   refine ⟨C, fun x hx hd => ?_⟩
+   have hy : A.mulVec x ∈ Metric.closedBall c R := hd

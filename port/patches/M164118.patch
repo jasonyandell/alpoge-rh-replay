@@ -1,0 +1,21 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PFunctionFieldDegree.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PFunctionFieldDegree.lean
+@@ -33,11 +33,13 @@
+     rw [← hbc.equiv.finrank_eq, projDegree]
+     let e : FractionRing (MvPolynomial (Fin d) ℂ) ≃ₐ[MvPolynomial (Fin d) ℂ] K :=
+       FractionRing.algEquiv (MvPolynomial (Fin d) ℂ) K
+-    symm
+-    refine Algebra.finrank_eq_of_equiv_equiv e.toRingEquiv
+-      (Algebra.TensorProduct.congr e AlgEquiv.refl).toRingEquiv ?_
+-    ext x
+-    simp [Algebra.TensorProduct.algebraMap_apply]
++    let eT := Algebra.TensorProduct.congr e
++      (AlgEquiv.refl : (MvPolynomial (Fin n) ℂ ⧸ J) ≃ₐ[MvPolynomial (Fin d) ℂ]
++        (MvPolynomial (Fin n) ℂ ⧸ J))
++    have hRank := Algebra.finrank_eq_of_equiv_equiv e.toRingEquiv eT.toRingEquiv (by
++      ext x
++      simp [eT, Algebra.TensorProduct.algebraMap_apply])
++    exact hRank.symm
+   ·
+     rw [eq_top_iff]
+     intro z _

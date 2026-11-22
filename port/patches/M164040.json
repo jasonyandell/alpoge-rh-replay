@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PConeAvoidsFinite",
+  "source_sha256": "6a4aee1857aaaee29277d7ffcdeb3c529b897da9397ec0ab68c4786890f7b3bc",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only change. Select the existing quotient algebra's scalar action explicitly and unfold it to multiplication by the image under projHom, and use the coefficient projection to read the same polynomial coefficients.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

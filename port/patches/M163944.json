@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.AuslanderBuchsbaumDepthBound",
+  "source_sha256": "568416a3f134be73747b94014461a9fc8c26f7240fe7af099bc1f23c1b60203f",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only change. Rewrite membership in the ring Jacobson radical using its equality with the maximal ideal of the local ring, so the existing maximal-ideal membership hypothesis supplies the argument to Module.free_quotSMulTop_iff_free.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "module": "GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PConeAvoidsOpen",
+  "source_sha256": "17bca1b1b82abb7529d7895daf4522dad33c5e6e5ff486e0ccd4d08ef408925f",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only change. Use the coefficient projection and qualify MvPolynomial.coeff_add, preserving the coefficients and the same coefficient-of-a-sum rewrite.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0283-lean436-20261122/P0283-receipt.json"
+}

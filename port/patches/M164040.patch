@@ -1,0 +1,23 @@
+--- a/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PConeAvoidsFinite.lean
++++ b/src/GroundTheory/HeightsAndTheta/Heights/ComplexAnalyticSets/PConeAvoidsFinite.lean
+@@ -41,8 +41,9 @@
+   have hsmul : ∀ (s : MvPolynomial (Fin d) ℂ) (p : MvPolynomial (Fin n) ℂ),
+       Ideal.Quotient.mk J p ∈ M → Ideal.Quotient.mk J (pullback A s * p) ∈ M := by
+     intro s p hp
+-    have : Ideal.Quotient.mk J (pullback A s * p) = s • Ideal.Quotient.mk J p := by
+-      rw [Algebra.smul_def, RingHom.algebraMap_toAlgebra, map_mul]; rfl
++    have : Ideal.Quotient.mk J (pullback A s * p) = alg.smul s (Ideal.Quotient.mk J p) := by
++      change _ = (projHom J A) s * Ideal.Quotient.mk J p
++      rw [map_mul]; rfl
+     rw [this]; exact M.smul_mem s hp
+   have hsum : ∀ {ι : Type} (s : Finset ι) (q : ι → MvPolynomial (Fin n) ℂ),
+       (∀ i ∈ s, Ideal.Quotient.mk J (q i) ∈ M) → Ideal.Quotient.mk J (∑ i ∈ s, q i) ∈ M :=
+@@ -82,7 +83,7 @@
+     have hdeg : s.degree = k := by
+       have := hq (mem_support_iff.mp hs)
+       rw [Finsupp.degree_eq_weight_one]; exact this
+-    have hCs : monomial s (coeff s q) = pullback A (C (coeff s q)) * monomial s 1 := by
++    have hCs : monomial s (q.coeff s) = pullback A (C (q.coeff s)) * monomial s 1 := by
+       simp [pullback, C_mul_monomial]
+     rw [hCs]
+     refine hsmul _ _ ?_
