@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LatticeFourthPropertyStatement",
+  "source_sha256": "a44744359e042cd31e7f7b861c6b264dfd0a8d9674626b1f12bf4b910fc56d3f",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0266-lean436-20261122/P0266-receipt.json"
+}

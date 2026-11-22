@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LintegralSplitColumn",
+  "source_sha256": "18b82c42a80974e942040ed7d6723b9d09d5869d6c31b773a75dd1f8160c2a2b",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0266-lean436-20261122/P0266-receipt.json"
+}

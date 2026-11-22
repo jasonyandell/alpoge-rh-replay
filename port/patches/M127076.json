@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResidueAlgebraUnramifiedStatement",
+  "source_sha256": "f98f2957d3aec2b5afa92d810be55efef04c473765eed57a365a8ce80c719ce6",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0266-lean436-20261122/P0266-receipt.json"
+}

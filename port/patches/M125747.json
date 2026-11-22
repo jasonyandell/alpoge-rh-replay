@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeetOverHypersurfaceOfGermStatement",
+  "source_sha256": "25cdda71d11896c71e95d0481315c4124f011c8677fee59e664301af0068bdf6",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "unchanged",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0266-lean436-20261122/P0266-receipt.json"
+}

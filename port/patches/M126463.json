@@ -1,0 +1,8 @@
+{
+  "module": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFractionSquareIdentity",
+  "source_sha256": "401927378a8d5fb3531e7bbef395b072ec2b140e7ded293d3a7ebcc40713d2f8",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only change. Use the renamed Polynomial.eval_finsetSum lemma for the same rewrite of polynomial evaluation over a finite sum.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0266-lean436-20261122/P0266-receipt.json"
+}
