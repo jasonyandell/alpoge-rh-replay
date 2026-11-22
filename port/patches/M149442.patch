@@ -1,0 +1,22 @@
+--- a/src/Formalism/LocalToGlobal/IndefiniteReal/LevelTypeEquivalence/AdlEqZeroOfMemNbhd.lean
++++ b/src/Formalism/LocalToGlobal/IndefiniteReal/LevelTypeEquivalence/AdlEqZeroOfMemNbhd.lean
+@@ -27,7 +27,7 @@
+   rw [← Finset.mul_prod_erase Finset.univ _ (Finset.mem_univ w0)] at hN
+   have h1 : w0 (r : F) ^ w0.mult < 1 := pow_lt_one₀ (hnn w0) (h w0) InfinitePlace.mult_pos.ne'
+   have h2 : ∏ w ∈ Finset.univ.erase w0, w (r : F) ^ w.mult ≤ 1 :=
+-    Finset.prod_le_one (fun w _ => pow_nonneg (hnn w) _) (fun w _ => pow_le_one₀ (hnn w) (h w).le)
++    Finset.prod_le_one₀ (fun w _ => pow_nonneg (hnn w) _) (fun w _ => pow_le_one₀ (hnn w) (h w).le)
+   have h3 : 0 ≤ w0 (r : F) ^ w0.mult := pow_nonneg (hnn w0) _
+   nlinarith
+ 
+@@ -68,8 +68,8 @@
+ 
+ theorem adl_norm_algebraMap (x : F) (w : InfinitePlace F) :
+     ‖(algebraMap F (InfiniteAdeleRing F) x) w‖ = w x := by
+-  simp [InfiniteAdeleRing.algebraMap_apply]
+-  first | rfl | simp [WithAbs.equiv, WithAbs.toAbs]
++  simp [InfiniteAdeleRing.algebraMap_apply, AbsoluteValue.Completion.norm_coe]
++  rfl
+ 
+ theorem adl_eq_zero_of_mem_nbhd (a : F) (ha : algebraMap F (AdeleRing (𝓞 F) F) a ∈ adlNbhd F) : a = 0 := by
+   obtain ⟨hinf, hfin⟩ := ha

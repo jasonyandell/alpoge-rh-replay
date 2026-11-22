@@ -1,0 +1,8 @@
+{
+  "module": "Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.AdlEqZeroOfMemNbhd",
+  "source_sha256": "ec5736c1af4c48f0a050dab680b47f15b8a74d8ef264d7aafcbdc39fab1da945",
+  "lean": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "notes": "Proof-only change. Use Finset.prod_le_one₀ with the existing nonnegativity and upper bounds, and use AbsoluteValue.Completion.norm_coe to reduce the same infinite adele coordinate norm to the place value.",
+  "evidence": "https://github.com/jasonyandell/alpoge-rh-replay/releases/download/port-P0274-lean436-20261122-c/P0274-receipt.json"
+}
